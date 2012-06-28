@@ -109,6 +109,10 @@ check_inputs = (amount, color) ->
 
 # -------------------
 
+lightness = (color) ->
+  hsl = to_hsl(color)
+  console.log hsl[2] / 100
+
 lighten = (color, amount) ->
   return false if check_inputs(amount, color) == false
   hsl = to_hsl(color)
